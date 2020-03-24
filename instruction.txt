@@ -1,0 +1,10 @@
+'"+" ve "-" butonları ile boncuk türlerinde oynama yapabilir, farklı boncuk ve
+renkleri girdikten sonra "HESAPLA" butonuna tıklayarak farklı dizilişleri
+görebilir; ileri ve geri butonları ile bulunan dizilişler arasında
+dolaşabilirsiniz.
+
+NOT : Boncuk sayısı için yüksek sayı değerleri girerseniz,
+dizilişler arasında ilerlerken uygulamanın kısa süreli yanıt vermediğini
+görebilirsiniz. Bunun nedeni uygulamanın eşsiz dizilişler aramasıdır. Yani
+ilerlediğiniz her dizilişte uygulama yeni bir diziliş bulurken bulduğu dizilişi
+önceden bulduğu dizilişler ile karşılaştığı için yapılan işlemler artmaktadır.'
