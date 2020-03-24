@@ -223,7 +223,7 @@ class BeadAlignment(tk.Tk):
             except StopIteration:
                 return False
             else:
-                self.draw_alignment_by_index(index)
+                return self.draw_alignment_by_index(index)
         else:
             self.canvas.draw_perm(self.known_permutations[index])
             self.nav_label.config(
