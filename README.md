@@ -1,0 +1,2 @@
+# boncuk_dizilimi
+ 
