@@ -152,10 +152,11 @@ class BeadAlignment(tk.Tk):
         )
 
         self.calc_button = ttk.Button(
-            self.hud_main, text="HESAPLA: ", command=self.calculate
+            self.hud_main, text="HESAPLA", command=self.calculate
         )
 
         self.place_widgets()
+        self.add_color()
 
     def instruction(self):
         text = open(file="instruction.txt", mode="r", encoding="utf-8").read()
@@ -228,7 +229,7 @@ class BeadAlignment(tk.Tk):
             self.canvas.draw_perm(self.known_permutations[index])
             self.nav_label.config(
                 text="{} / {}".format(
-                    index, len(self.known_permutations)
+                    index + 1, len(self.known_permutations)
                 )
             )
             return True
