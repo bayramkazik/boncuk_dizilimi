@@ -168,14 +168,14 @@ class BeadAlignment(tk.Tk):
  
     def nav_forward(self):
         if self.draw_alignment_by_index(self.align_index + 1) is False:
+            self.align_index += 1
+        else:
             msg.showwarning(
                 "Uyarı !",
                 """
                 Hesaplanan tüm dizilimleri zaten gördünüz !
                 """
-            )
-        else:
-            self.align_index += 1
+            ) 
 
     def add_color(self):
         new_frame = ColorFrame(self.colors_frame)
