@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4868c30e-4806-481a-b15a-1a84256c0ca6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +22,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="D:/python_projects/machine_got_it" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.main">
@@ -114,6 +114,10 @@
       <screen x="0" y="0" width="1366" height="738" />
     </state>
     <state x="344" y="0" key="CommitChangelistDialog2/-1366.0.1366.738/0.0.1366.738@0.0.1366.738" timestamp="1585088463893" />
+    <state x="463" y="123" key="FileChooserDialogImpl" timestamp="1585158293520">
+      <screen x="0" y="0" width="1366" height="738" />
+    </state>
+    <state x="463" y="123" key="FileChooserDialogImpl/-1366.0.1366.738/0.0.1366.738@0.0.1366.738" timestamp="1585158293520" />
     <state width="603" height="306" key="GridCell.Tab.0.bottom" timestamp="1585088489053">
       <screen x="0" y="0" width="1366" height="738" />
     </state>

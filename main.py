@@ -28,16 +28,16 @@ class Instruction(tk.Toplevel):
         super().__init__(*args, **kwargs)
         self.attributes("-topmost", True)
         self.resizable(False, False)
-        
+
         self.title("Bilgi")
-        
+
         self.info_title = ttk.Label(self, text="BİLGİ")
         self.info_title.pack(expand=True, pady=20)
         self.instruction_text = ttk.Label(self, text=text)
         self.instruction_text.pack(
             expand=True, padx=20, pady=20
         )
-    
+
     def show(self):
         self.deiconify()
         self.transient(self.master)
@@ -47,31 +47,31 @@ class Instruction(tk.Toplevel):
 class CustomCanvas(tk.Canvas):
     def __init__(self, parent, r=200, **kw):
         super().__init__(parent, width=r * 2, height=r * 2, **kw)
-        
+
         self.r = r
 
     def draw_perm(self, bead_colors: List[str]):
         self.delete("all")
-        
+
         screen_spacing = 15
-        
+
         total_points = len(bead_colors)
-        
+
         r = self.r - screen_spacing
         point_r = 10
-        
+
         self.create_oval(
             screen_spacing, screen_spacing,
             r * 2 + screen_spacing,
             r * 2 + screen_spacing,
             outline="light gray", width=5
         )
-        
+
         for i, bead_color in enumerate(bead_colors):
             angle = (i * pi * 2) / total_points - pi / 2
             x = r * cos(angle) + r + screen_spacing
             y = r * sin(angle) + r + screen_spacing
-            
+
             self.create_oval(
                 x - point_r, y - point_r, x + point_r, y + point_r,
                 fill=bead_color
@@ -102,7 +102,7 @@ class ColorFrame(tk.LabelFrame):
             self.color = hex_color
             self.color_select_button.config(text=[int(i) for i in rgb_color])
             self.config(bg=hex_color)
-    
+
     def color_count(self):
         if self.color_count_entry.get().isdecimal():
             return int(self.color_count_entry.get())
@@ -120,10 +120,10 @@ class BeadAlignment(tk.Tk):
         self.per_iterator = iter(self.permutations)
         self.align_index = 0
         self.known_permutations = []
-        
+
         self.canvas = CustomCanvas(self, r=r)
         self.canvas.config(bg="#dddddd")
-        
+
         self.nav_bar = tk.Frame(self)
         self.back_button = ttk.Button(
             self.nav_bar, text="Geri", command=self.nav_back
@@ -135,11 +135,11 @@ class BeadAlignment(tk.Tk):
 
         self.hud = tk.Frame(self)
         self.hud_main = tk.LabelFrame(self.hud)
-        
+
         self.info_button = ttk.Button(
             self.hud_main, text="?", command=self.instruction
         )
-        
+
         self.color_frame_list = []
         self.colors_frame = tk.Frame(self.hud_main)
 
@@ -166,7 +166,7 @@ class BeadAlignment(tk.Tk):
         if self.align_index > 0:
             self.align_index -= 1
             self.draw_alignment_by_index(self.align_index)
- 
+
     def nav_forward(self):
         if self.draw_alignment_by_index(self.align_index + 1) is False:
             self.align_index += 1
@@ -176,7 +176,7 @@ class BeadAlignment(tk.Tk):
                 """
                 Hesaplanan tüm dizilimleri zaten gördünüz !
                 """
-            ) 
+            )
 
     def add_color(self):
         new_frame = ColorFrame(self.colors_frame)
@@ -211,7 +211,7 @@ class BeadAlignment(tk.Tk):
                 return
             for _ in range(color_frame.color_count()):
                 color_list.append(color_frame.color)
-        
+
         self.permutations = non_repeating_per(color_list)
         self.per_iterator = iter(self.permutations)
         self.known_permutations = []
