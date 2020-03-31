@@ -168,7 +168,7 @@ class BeadAlignment(tk.Tk):
             self.draw_alignment_by_index(self.align_index)
 
     def nav_forward(self):
-        if self.draw_alignment_by_index(self.align_index + 1) is False:
+        if self.draw_alignment_by_index(self.align_index + 1):
             self.align_index += 1
         else:
             msg.showwarning(
