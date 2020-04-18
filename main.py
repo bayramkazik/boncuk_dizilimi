@@ -100,7 +100,7 @@ class ColorFrame(tk.LabelFrame):
         if color != (None, None):
             rgb_color, hex_color = color
             self.color = hex_color
-            self.color_select_button.config(text=[int(i) for i in rgb_color])
+            self.color_select_button.config(text=hex_color)
             self.config(bg=hex_color)
 
     def color_count(self):
